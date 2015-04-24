@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Credit Card Form</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/creditcard.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/creditcard.css">
+
+</head>
+<body>
+
+	<br /><br />
+
+	<div class="creditcard">
+		<img src="./img/creditcard/visa.png" class="creditcard-logo visa" />
+		<img src="./img/creditcard/mastercard.png" class="creditcard-logo mastercard" />
+		<img src="./img/creditcard/discover.png" class="creditcard-logo discover" />
+		<img src="./img/creditcard/americanexpress.png" class="creditcard-logo americanexpress" />
+
+		<input data-stripe="number" class="creditcard-number" type="text" placeholder="0000 0000 0000 0000" />
+		<input data-stripe="cvc" class="creditcard-cvc" type="password" placeholder="CVC" />
+		<input name="cardholderName" class="creditcard-name" type="text" placeholder="John Smith" value="Jonas Weigert" />
+		<input data-stripe="exp-month" class="creditcard-exp-month" type="text" placeholder="MM" />
+		<input data-stripe="exp-year" class="creditcard-exp-year" type="text" placeholder="YY" />
+	</div>
+	
+</body>
+</html>
