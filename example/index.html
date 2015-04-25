@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Credit Card Form</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="./creditcard.js"></script> -->
+	<script type="text/javascript" src="../js/ngCreditCard.js"></script>
+	<script type="text/javascript" src="./controllers.js"></script>
+	<link rel="stylesheet" type="text/css" href="./creditcard.css">
+
+</head>
+<body ng-app="Test" ng-controller="TestCtrl">
+	<br /><br />
+
+	<ng-credit-card card='card' cvc='cvc' card-holder-name='name' exp-month='month' exp-year='year'></ng-credit-card>
+	
+	<p>Card: {{card}}</p>
+	<p>CVC: {{cvc}}</p>
+	<p>Cardholder's Name: {{name}}</p>
+	<p>Expiration Month: {{month}}</p>
+	<p>Expiration Year: {{year}}</p>
+</body>
+</html>
