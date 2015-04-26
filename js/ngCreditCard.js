@@ -39,16 +39,15 @@ angular.module("ngCreditCard", [])
             },
             template:
                 "<div class='creditcard' ng-class='cc_name'>" +
-                "<img ng-src='../img/creditcard/{{cc_name}}.png' ng-show='cc_name' class='creditcard-logo' ng-class='cc_name' />" +
+                "<img src='../img/creditcard/visa.png' ng-show=\"cc_name && cc_name == 'visa'\" class='creditcard-logo visa' />" +
+                "<img src='../img/creditcard/mastercard.png' ng-show=\"cc_name && cc_name == 'mastercard'\" class='creditcard-logo mastercard' />" +
+                "<img src='../img/creditcard/americanexpress.png' ng-show=\"cc_name && cc_name == 'americanexpress'\" class='creditcard-logo americanexpress' />" +
+                "<img src='../img/creditcard/discover.png' ng-show=\"cc_name && cc_name == 'discover'\" class='creditcard-logo discover' />" +
                 "<input ng-model='card' ng-change='updateNumber()' class='creditcard-number' type='text' placeholder='&#9679;&#9679;&#9679;&#9679;&nbsp;&#9679;&#9679;&#9679;&#9679;&nbsp;&#9679;&#9679;&#9679;&#9679;&nbsp;&#9679;&#9679;&#9679;&#9679;&nbsp;' maxlength='19' />" +
                 "<input ng-model='cvc' class='creditcard-cvc' type='text' placeholder='CVC' maxlength='4' />" +
                 "<input ng-model='cardHolderName' class='creditcard-name' type='text' placeholder='John Smith' />" +
                 "<input ng-model='expMonth' class='creditcard-exp-month' type='text' placeholder='MM' />" +
                 "<input ng-model='expYear' class='creditcard-exp-year' type='text' placeholder='YYYY' maxlength='4' />" +
                 "</div>"
-            ,
-            link: function(scope, element, attrs) {
-
-            }
         }
     })
