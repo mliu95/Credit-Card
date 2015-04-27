@@ -1,0 +1,32 @@
+{
+  "name": "pretty-credit-card",
+  "version": "1.0.0",
+  "homepage": "https://github.com/lawnstarter/pretty-credit-card",
+  "authors": [
+    "Jonas Weigert <jonas@lawnstarter.com>",
+    "Michael Liu <michael.liu95@gmail.com>"
+  ],
+  "description": "A simple Angular directive and JQuery plugin that makes a pretty series of inputs for capturing credit cards",
+  "main": "js/ngCreditCard.js",
+  "keywords": [
+    "credit",
+    "card",
+    "credit",
+    "card",
+    "input",
+    "html",
+    "css",
+    "javascript",
+    "jquery",
+    "angularjs",
+    "angular",
+    "pretty"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}

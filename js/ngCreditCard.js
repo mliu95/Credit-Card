@@ -1,3 +1,6 @@
+// nGCreditCard, an Angular module that provides one directive to capture credit card input
+// For help on getting started, look in the example folder
+
 'use strict';
 
 angular.module("ngCreditCard", [])
