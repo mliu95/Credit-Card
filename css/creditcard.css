@@ -15,6 +15,7 @@
 	transition:0.2s background ease-in-out;
 }
 	.creditcard input {
+		box-sizing: border-box;
 		color: #FFF;
 		background: none;
 		border:0px;
@@ -67,11 +68,16 @@
 		position: absolute;
 		top: 180px;
 		left:240px;
-		width: 52px;
 		text-align: center;
 	}
+	.creditcard .creditcard-exp-month {
+		width: 48px;
+		padding: 0;
+	}
 	.creditcard .creditcard-exp-year {
-		left: 312px;
+		left: 300px;
+		width: 64px;
+		padding: 0px 7px 0px 7px;
 	}
 
 	/*******************************************************\
