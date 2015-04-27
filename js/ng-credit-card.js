@@ -5,6 +5,10 @@
 
 angular.module("ngCreditCard", [])
     .controller("CardController", ['$scope', function($scope) {
+        if($scope.imageDirectory[$scope.imageDirectory.length-1] != "/")
+            $scope.dir = $scope.imageDirectory + "/";
+        else
+            $scope.dir = $scope.imageDirectory;
         $scope.updateNumber = function() {
             var formattedCard = angular.copy($scope.card).split("");
             for(var i=1;i<4;i++) {
@@ -38,14 +42,15 @@ angular.module("ngCreditCard", [])
                 'cvc': '=cvc',
                 'cardHolderName': '=cardHolderName',
                 'expMonth': '=expMonth',
-                'expYear': '=expYear'
+                'expYear': '=expYear',
+                'imageDirectory': '@imageDirectory'
             },
             template:
                 "<div class='creditcard' ng-class='cc_name'>" +
-                "<img src='../img/visa.png' ng-show=\"cc_name && cc_name == 'visa'\" class='creditcard-logo visa' />" +
-                "<img src='../img/mastercard.png' ng-show=\"cc_name && cc_name == 'mastercard'\" class='creditcard-logo mastercard' />" +
-                "<img src='../img/americanexpress.png' ng-show=\"cc_name && cc_name == 'americanexpress'\" class='creditcard-logo americanexpress' />" +
-                "<img src='../img/discover.png' ng-show=\"cc_name && cc_name == 'discover'\" class='creditcard-logo discover' />" +
+                "<img ng-src='{{dir}}visa.png' ng-show=\"cc_name && cc_name == 'visa'\" class='creditcard-logo visa' />" +
+                "<img ng-src='{{dir}}mastercard.png' ng-show=\"cc_name && cc_name == 'mastercard'\" class='creditcard-logo mastercard' />" +
+                "<img ng-src='{{dir}}americanexpress.png' ng-show=\"cc_name && cc_name == 'americanexpress'\" class='creditcard-logo americanexpress' />" +
+                "<img ng-src='{{dir}}discover.png' ng-show=\"cc_name && cc_name == 'discover'\" class='creditcard-logo discover' />" +
                 "<input ng-model='card' ng-change='updateNumber()' class='creditcard-number' type='text' placeholder='&#9679;&#9679;&#9679;&#9679;&nbsp;&#9679;&#9679;&#9679;&#9679;&nbsp;&#9679;&#9679;&#9679;&#9679;&nbsp;&#9679;&#9679;&#9679;&#9679;&nbsp;' maxlength='19' />" +
                 "<input ng-model='cvc' class='creditcard-cvc' type='text' placeholder='CVC' maxlength='4' />" +
                 "<input ng-model='cardHolderName' class='creditcard-name' type='text' placeholder='John Smith' />" +
