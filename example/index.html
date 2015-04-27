@@ -14,16 +14,27 @@
 <body ng-app="Test" ng-controller="TestCtrl">
 	<br /><br />
 
-	<ng-credit-card image-directory="../img" card='card' cvc='cvc' card-holder-name='name' exp-month='month' exp-year='year'></ng-credit-card>
+	<form name="cardForm">
+		<ng-credit-card image-directory="../img" card='card' cvc='cvc' card-holder-name='name' exp-month='month' exp-year='year'></ng-credit-card>
+	</form>
 	
 	<br />
-	<div style="width:300px;margin-left:auto;margin-right:auto;">
-		<strong>Controller Values</strong>
-		<p>Card: {{card}}</p>
-		<p>CVC: {{cvc}}</p>
-		<p>Cardholder's Name: {{name}}</p>
-		<p>Expiration Month: {{month}}</p>
-		<p>Expiration Year: {{year}}</p>
+	<ul style="width:350px;margin-left:auto;margin-right:auto;">
+	  <li ng-repeat="(key, errors) in cardForm.$error track by $index"> <strong>{{ key }}</strong> errors
+	    <ul>
+	      <li ng-repeat="e in errors">{{ e.$name }} has an error: <strong>{{ key }}</strong>.</li>
+	    </ul>
+	  </li>
+	</ul>
+	<ul style="width:350px;margin-left:auto;margin-right:auto;">
+		<li><strong>Controller Values</strong></li>
+		<ul>
+			<li>Card: {{card}}</li>
+			<li>CVC: {{cvc}}</li>
+			<li>Cardholder's Name: {{name}}</li>
+			<li>Expiration Month: {{month}}</li>
+			<li>Expiration Year: {{year}}</li>
+		</ul>
 	</div>
 </body>
 </html>
