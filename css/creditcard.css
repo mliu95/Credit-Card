@@ -2,7 +2,8 @@
 	$CREDITCARD
 \*********************************************/
 .creditcard {
-	width: 385px;
+	min-width: 320px;
+	max-width: 385px;
 	height: 240px;
 	margin: auto;
 	background: #333;
