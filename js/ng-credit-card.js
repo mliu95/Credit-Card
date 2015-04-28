@@ -59,7 +59,7 @@ angular.module("ngCreditCard", [])
                 "<input ng-model='card' name='cc_card' ng-change='updateNumber()' class='creditcard-number' type='text' placeholder='&#9679;&#9679;&#9679;&#9679;&nbsp;&#9679;&#9679;&#9679;&#9679;&nbsp;&#9679;&#9679;&#9679;&#9679;&nbsp;&#9679;&#9679;&#9679;&#9679;&nbsp;' maxlength='19' ng-model-options='{allowInvalid: true}' ng-trim='false' required />" +
                 "<input ng-model='cvc' name='cc_cvc' class='creditcard-cvc' type='number' placeholder='CVC' maxlength='4' />" +
                 "<input ng-model='cardHolderName' name='cc_name' class='creditcard-name' type='text' placeholder='John Smith' required />" +
-                "<input ng-model='expMonth' name='cc_month' class='creditcard-exp-month' type='number' placeholder='MM' min='0' max='12' maxlength='2' required />" +
+                "<input ng-model='expMonth' name='cc_month' class='creditcard-exp-month' type='number' placeholder='MM' min='1' max='12' maxlength='2' required />" +
                 "<input ng-model='expYear' name='cc_year' class='creditcard-exp-year' type='number' placeholder='YYYY' maxlength='4' required />" +
                 "</div>"
         }
