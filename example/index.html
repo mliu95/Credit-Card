@@ -15,9 +15,12 @@
 	<br /><br />
 
 	<form name="cardForm">
-		<ng-credit-card image-directory="../img" card='card' cvc='cvc' card-holder-name='name' exp-month='month' exp-year='year'></ng-credit-card>
+		<ng-credit-card image-directory="../img" card='card' cvc='cvc' card-holder-name='name' exp-month='month' exp-year='year' ng-disabled="disabled"></ng-credit-card>
 	</form>
-	
+	<div style="text-align: center;">
+		{{disabled}}
+		<button ng-click="disabled = !disabled">Disable/Enable</button>
+	</div>
 	<br />
 	<ul style="width:350px;margin-left:auto;margin-right:auto;">
 	  <li ng-repeat="(key, errors) in cardForm.$error track by $index"> <strong>{{ key }}</strong> errors

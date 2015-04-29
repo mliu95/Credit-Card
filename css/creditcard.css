@@ -30,6 +30,10 @@
     	-moz-appearance: textfield;
 	}
 
+	.creditcard input:disabled {
+		color: #BBBBBB;
+	}
+
 	.creditcard input::-webkit-input-placeholder {
 	   color: #FFF;
 	}
